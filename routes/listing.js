@@ -21,7 +21,7 @@ router.get("/new", isLoggedIn,listingController.renderNew);
 
 
 //router.route for /:id route for get, post and delete method
-router.route("/:id").get(wrapAsync(listingController.showListings)).put(isLoggedIn,isOwner,upload.single("listing[image]"),validateListing, wrapAsync(listingController.updateListing)).delete(isLoggedIn,isOwner,wrapAsync(listingController.deleteListing));
+router.route("/:id").get(wrapAsync(listingController.showListing)).put(isLoggedIn,isOwner,upload.single("listing[image]"),validateListing, wrapAsync(listingController.updateListing)).delete(isLoggedIn,isOwner,wrapAsync(listingController.deleteListing));
 
 
 //edit listing form route -----
